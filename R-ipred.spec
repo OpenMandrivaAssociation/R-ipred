@@ -9,11 +9,9 @@ Group:            Sciences/Mathematics
 License:          GPL
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.8-11.tar.gz
-
-Requires:         R-rpart R-MASS R-mlbench R-survival R-nnet R-class 
-Requires:         R-mvtnorm 
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-rpart R-MASS R-mlbench R-survival R-nnet R-class
-BuildRequires:    R-mvtnorm 
+Requires:         R-rpart R-MASS R-mlbench R-survival R-nnet R-class R-mvtnorm
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-rpart R-MASS R-mlbench R-survival R-nnet R-class R-mvtnorm
 
 %description
 Improved predictive models by indirect classification and bagging for
