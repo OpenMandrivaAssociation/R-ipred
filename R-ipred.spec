@@ -3,7 +3,7 @@
 
 Name:             R-%{packname}
 Version:          0.8_11
-Release:          1
+Release:          2
 Summary:          Improved Predictors
 Group:            Sciences/Mathematics
 License:          GPL
