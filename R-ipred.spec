@@ -2,16 +2,20 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          0.8_11
-Release:          2
+Version:          0.9.1
+Release:          1
 Summary:          Improved Predictors
 Group:            Sciences/Mathematics
 License:          GPL
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.8-11.tar.gz
-Requires:         R-rpart R-MASS R-mlbench R-survival R-nnet R-class R-mvtnorm
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex
-BuildRequires:    R-rpart R-MASS R-mlbench R-survival R-nnet R-class R-mvtnorm
+Source0:          http://cran.r-project.org/src/contrib/ipred_0.9-1.tar.gz
+
+Requires:         R-rpart R-MASS R-mlbench R-survival R-nnet R-class 
+Requires:         R-mvtnorm 
+Requires:         R-prodlim
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-rpart R-MASS R-mlbench R-survival R-nnet R-class
+BuildRequires:    R-mvtnorm 
+BuildRequires:    R-prodlim
 
 %description
 Improved predictive models by indirect classification and bagging for
@@ -36,6 +40,7 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %dir %{rlibdir}/%{packname}
 %doc %{rlibdir}/%{packname}/doc
 %doc %{rlibdir}/%{packname}/html
+%doc %{rlibdir}/%{packname}/NEWS
 %doc %{rlibdir}/%{packname}/DESCRIPTION
 %{rlibdir}/%{packname}/INDEX
 %{rlibdir}/%{packname}/NAMESPACE
@@ -44,3 +49,12 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+
+
+%changelog
+* Fri Feb 17 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.8_11-1
++ Revision: 775920
+- Import R-ipred
+- Import R-ipred
+
+
